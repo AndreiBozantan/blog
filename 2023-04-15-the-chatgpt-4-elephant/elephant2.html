@@ -1,0 +1,86 @@
+<!-- could you improve this, e.g. add another pair of legs, a tail and ears? -->
+
+<!-- Certainly! Here's an improved version of the elephant drawing, adding a second pair of legs, a tail, and ears: -->
+
+<!-- This updated code adds a second pair of legs, a tail, and ears to the elephant drawing.
+You can continue to refine and adjust the drawing as needed, or even add more details and colors to create a more realistic or stylized representation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw an Elephant</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="elephantCanvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('elephantCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw body
+        ctx.beginPath();
+        ctx.ellipse(400, 450, 200, 100, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#888';
+        ctx.fill();
+
+        // Draw head
+        ctx.beginPath();
+        ctx.ellipse(180, 380, 100, 80, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#888';
+        ctx.fill();
+
+        // Draw trunk
+        ctx.beginPath();
+        ctx.moveTo(80, 380);
+        ctx.bezierCurveTo(30, 370, 30, 420, 80, 430);
+        ctx.lineWidth = 20;
+        ctx.strokeStyle = '#888';
+        ctx.stroke();
+
+        // Draw front legs
+        ctx.beginPath();
+        ctx.fillRect(270, 550, 40, 100);
+        ctx.fillRect(360, 550, 40, 100);
+
+        // Draw back legs
+        ctx.beginPath();
+        ctx.fillRect(450, 550, 40, 100);
+        ctx.fillRect(540, 550, 40, 100);
+
+        // Draw tail
+        ctx.beginPath();
+        ctx.moveTo(620, 450);
+        ctx.lineTo(720, 400);
+        ctx.lineWidth = 10;
+        ctx.stroke();
+
+        // Draw ears
+        ctx.beginPath();
+        ctx.moveTo(160, 320);
+        ctx.lineTo(60, 220);
+        ctx.lineTo(160, 250);
+        ctx.fillStyle = '#888';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(160, 440);
+        ctx.lineTo(60, 540);
+        ctx.lineTo(160, 510);
+        ctx.fillStyle = '#888';
+        ctx.fill();
+
+        // Draw eyes
+        ctx.beginPath();
+        ctx.arc(150, 350, 10, 0, 2 * Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+
+    </script>
+</body>
+</html>
