@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draw an Elephant</title>
 </head>
 <body>
     <canvas id="myCanvas" width="800" height="600"></canvas>
@@ -17,6 +16,11 @@
         ctx.fill();
 
         ctx.beginPath();
+        ctx.ellipse(180, 380, 100, 80, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#888';
+        ctx.fill();
+
+        ctx.beginPath();
         ctx.moveTo(80, 380);
         ctx.bezierCurveTo(30, 370, 30, 420, 80, 430);
         ctx.lineWidth = 20;
@@ -24,9 +28,10 @@
         ctx.stroke();
 
         ctx.beginPath();
-        ctx.ellipse(180, 380, 100, 80, 0, 0, 2 * Math.PI);
-        ctx.fillStyle = '#888';
-        ctx.fill();
+        ctx.moveTo(620, 450);
+        ctx.bezierCurveTo(660, 480, 660, 320, 720, 360);
+        ctx.lineWidth = 10;
+        ctx.stroke();
 
         ctx.beginPath();
         ctx.moveTo(160, 320);
@@ -42,24 +47,19 @@
         ctx.fillStyle = '#888';
         ctx.fill();
 
-        // Added missing ear
+        // Adding the other ear
         ctx.beginPath();
-        ctx.moveTo(600, 320);
-        ctx.lineTo(700, 220);
-        ctx.lineTo(600, 250);
+        ctx.moveTo(200, 320);
+        ctx.lineTo(300, 220);
+        ctx.lineTo(200, 250);
         ctx.fillStyle = '#888';
         ctx.fill();
-
-        ctx.beginPath();
-        ctx.moveTo(620, 450);
-        ctx.bezierCurveTo(660, 480, 660, 320, 720, 360);
-        ctx.lineWidth = 10;
-        ctx.stroke();
 
         ctx.beginPath();
         ctx.arc(150, 350, 10, 0, 2 * Math.PI);
         ctx.fillStyle = 'white';
         ctx.fill();
+
     </script>
 </body>
 </html>
