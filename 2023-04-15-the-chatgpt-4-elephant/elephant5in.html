@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.ellipse(400, 450, 200, 100, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#888';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.ellipse(180, 380, 100, 80, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = '#888';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(80, 380);
+        ctx.bezierCurveTo(30, 370, 30, 420, 80, 430);
+        ctx.lineWidth = 20;
+        ctx.strokeStyle = '#888';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(620, 450);
+        ctx.bezierCurveTo(660, 480, 660, 320, 720, 360);
+        ctx.lineWidth = 10;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(160, 320);
+        ctx.lineTo(60, 220);
+        ctx.lineTo(160, 250);
+        ctx.fillStyle = '#888';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(160, 440);
+        ctx.lineTo(60, 540);
+        ctx.lineTo(160, 510);
+        ctx.fillStyle = '#888';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(150, 350, 10, 0, 2 * Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+
+    </script>
+</body>
+</html>
